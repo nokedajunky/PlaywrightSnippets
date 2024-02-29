@@ -1,4 +1,6 @@
-# Playwright snippets 
+<h1 align="center">
+ Playwright Snippets
+</h1>
 
 ## Description
 
