@@ -35,6 +35,3 @@ jobs:
 
     - name: Build with Gradle Wrapper
       run: ./gradlew build
-
-    - name: Run unit tests for snippets xml file
-      run: ./gradlew test
