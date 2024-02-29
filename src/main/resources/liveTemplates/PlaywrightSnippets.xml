@@ -1,0 +1,359 @@
+<templateSet group="PW">
+  <template name="p-t" value="test('$TTILE$', async ($FIXTURES$) =&gt; {&#10;    $BODY$&#10;});" description="Test - test block - Declares a test." toReformat="false" toShortenFQNames="true">
+    <variable name="TTILE" expression="" defaultValue="{ page }" alwaysStopAt="true" />
+    <variable name="FIXTURES" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="BODY" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="p-taa" value="test.afterAll(async ($FXITURES$) =&gt; {&#10;    $BODY$&#10;});" description="Test - afterAll block - Declares an afterAll hook that is executed once per worker after all tests. No title in this one." toReformat="false" toShortenFQNames="true">
+    <variable name="FXITURES" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="BODY" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="p-taat" value="test.afterAll($TITLE$, async ($FXITURES$) =&gt; {&#10;    $BODY$&#10;});" description="Test - afterAll block with title - Declares an afterAll hook that is executed once per worker after all tests. Can declare a title." toReformat="false" toShortenFQNames="true">
+    <variable name="TITLE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="FXITURES" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="BODY" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="p-tae" value="test.afterEach(async ($FXITURES$) =&gt; {&#10;    $BODY$&#10;});" description="Test - afterEach block - Declares an afterEach hook that is executed after each test. No title in this one." toReformat="false" toShortenFQNames="true">
+    <variable name="FXITURES" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="BODY" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="p-taet" value="test.afterEach($TITLE$, async ($FXITURES$) =&gt; {&#10;    $BODY$&#10;});" description="Test - afterEach block with title - Declares an afterEach hook that is executed after each test. Can declare a title." toReformat="false" toShortenFQNames="true">
+    <variable name="TITLE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="FXITURES" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="BODY" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="p-d" value="test.describe('$TTILE$', ($FXITURES$) =&gt; {&#10;    $BODY$&#10;});" description="Test - describe block - Declares a group of tests, just a single describe block." toReformat="false" toShortenFQNames="true">
+    <variable name="TTILE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="FXITURES" expression="" defaultValue="{ page }" alwaysStopAt="true" />
+    <variable name="BODY" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="p-dblock" value="test.describe('$DESCRIBE_TTILE$', ($DESCRIBE_FXITURES$) =&gt; {&#10;    $DESCRIBE_BODY$&#10;    &#10;    test('$TEST_TTILE$', async ($TEST_FIXTURES$) =&gt; {&#10;        $TEST_BODY$&#10;    });&#10;});" description="Test - describe block with test block - Declares a group of tests, with a 1 test inside." toReformat="false" toShortenFQNames="true">
+    <variable name="DESCRIBE_TTILE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="DESCRIBE_FXITURES" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="DESCRIBE_BODY" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="TEST_TTILE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="TEST_FIXTURES" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="TEST_BODY" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="p-tst" value="test.setTimeout($TIMEOUT$);&#10;" description="Test - setTimeout - Changes the timeout for the test." toReformat="false" toShortenFQNames="true">
+    <variable name="TIMEOUT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="p-ts" value="await test.step('$TITLE$', async ($FIXTURES$) =&gt; {&#10;    $BODY$&#10;});" description="Test - step block - Declares a test step that is shown in the report." toReformat="false" toShortenFQNames="true">
+    <variable name="TITLE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="FIXTURES" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="BODY" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="p-tu" value="test.use($OPTIONS$);" description="Test - use - Specifies options or fixtures to use in a single test file or a test.describe() group." toReformat="false" toShortenFQNames="true">
+    <variable name="OPTIONS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="p-eba" value="await expect($ELEMENT$).toBeAttached($OPTIONS$);" description="Expect - toBeAttached - Ensures that Locator points to an element that is connected to a Document or a ShadowRoot." toReformat="false" toShortenFQNames="true">
+    <variable name="ELEMENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="OPTIONS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="p-ebc" value="await expect($ELEMENT$).toBeChecked($OPTIONS$);" description="Expect - toBeChecked - Ensures the Locator points to a checked input." toReformat="false" toShortenFQNames="true">
+    <variable name="ELEMENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="OPTIONS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="p-ebd" value="await expect($ELEMENT$).toBeDisabled($OPTIONS$);" description="Expect - toBeDisabled- Ensures the Locator points to a disabled element." toReformat="false" toShortenFQNames="true">
+    <variable name="ELEMENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="OPTIONS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="p-ebed" value="await expect($ELEMENT$).toBeEditable($OPTIONS$);" description="Expect - toBeEditable - Ensures the Locator points to an editable element." toReformat="false" toShortenFQNames="true">
+    <variable name="ELEMENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="OPTIONS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="p-ebem" value="await expect($ELEMENT$).toBeEmpty($OPTIONS$);" description="Expect - toBeEmpty - Ensures the Locator points to an empty editable element or to a DOM node that has no text." toReformat="false" toShortenFQNames="true">
+    <variable name="ELEMENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="OPTIONS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="p-eben" value="await expect($ELEMENT$).toBeEnabled($OPTIONS$);" description="Expect - toBeEnabled - Ensures the Locator points to an enabled element." toReformat="false" toShortenFQNames="true">
+    <variable name="ELEMENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="OPTIONS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="p-ebf" value="await expect($ELEMENT$).toBeFocused($OPTIONS$);" description="Expect - toBeFocused - Ensures the Locator points to a focused DOM node." toReformat="false" toShortenFQNames="true">
+    <variable name="ELEMENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="OPTIONS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="p-ebh" value="await expect($ELEMENT$).toBeHidden($OPTIONS$);" description="Expect - toBeHidden - Ensures that Locator either does not resolve to any DOM node, or resolves to a non-visible one." toReformat="false" toShortenFQNames="true">
+    <variable name="ELEMENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="OPTIONS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="p-ebinv" value="await expect($ELEMENT$).toBeInViewport($OPTIONS$);" description="Expect - toBeInViewport - Ensures the Locator points to an element that intersects viewport, according to the intersection observer API" toReformat="false" toShortenFQNames="true">
+    <variable name="ELEMENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="OPTIONS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="p-ebv" value="await expect($ELEMENT$).toBeVisible($OPTIONS$);" description="Expect - toBeVisible - Ensures that Locator points to an attached and visible DOM node." toReformat="false" toShortenFQNames="true">
+    <variable name="ELEMENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="OPTIONS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="p-eha" value="await expect($ELEMENT$).toHaveAttribute($OPTIONS$);" description="Expect - toHaveAttribute - Ensures the Locator points to an element with given attribute." toReformat="false" toShortenFQNames="true">
+    <variable name="ELEMENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="OPTIONS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="p-ehclass" value="await expect($ELEMENT$).toHaveClass($OPTIONS$);" description="Expect - toHaveClass - Ensures the Locator points to an element with given CSS classes." toReformat="false" toShortenFQNames="true">
+    <variable name="ELEMENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="OPTIONS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="p-ehcount" value="await expect($ELEMENT$).toHaveCount($OPTIONS$);" description="Expect - toHaveCount - Ensures the Locator resolves to an exact number of DOM nodes." toReformat="false" toShortenFQNames="true">
+    <variable name="ELEMENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="OPTIONS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="p-ehcss" value="await expect($ELEMENT$).toHaveCSS($OPTIONS$);" description="Expect - toHaveCSS - Ensures the Locator resolves to an element with the given computed CSS style." toReformat="false" toShortenFQNames="true">
+    <variable name="ELEMENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="OPTIONS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="p-ehi" value="await expect($ELEMENT$).toHaveId($OPTIONS$);" description="Expect - toHaveId - Ensures the Locator points to an element with the given DOM Node ID." toReformat="false" toShortenFQNames="true">
+    <variable name="ELEMENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="OPTIONS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="p-ehjsp" value="await expect($ELEMENT$).toHaveJSProperty($OPTIONS$);" description="Expect - toHaveJSProperty - Ensures the Locator points to an element with given JavaScript property." toReformat="false" toShortenFQNames="true">
+    <variable name="ELEMENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="OPTIONS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="p-ehs" value="await expect($ELEMENT$).toHaveScreenshot($OPTIONS$);" description="Expect - toHaveScreenshot - This function will wait until two consecutive locator screenshots yield the same result, and then compare the last screenshot with the expectation." toReformat="false" toShortenFQNames="true">
+    <variable name="ELEMENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="OPTIONS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="p-eht" value="await expect($ELEMENT$).toHaveText($OPTIONS$);" description="Expect - toHaveText - Ensures the Locator points to an element with the given text. All nested elements will be considered when computing the text content of the element. You can use regular expressions for the value as well." toReformat="false" toShortenFQNames="true">
+    <variable name="ELEMENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="OPTIONS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="p-ehv" value="await expect($ELEMENT$).toHaveValue($OPTIONS$);" description="Expect - toHaveValue - Ensures the Locator points to an element with the given input value. You can use regular expressions for the value as well." toReformat="false" toShortenFQNames="true">
+    <variable name="ELEMENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="OPTIONS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="p-ehvs" value="await expect($ELEMENT$).toHaveValues($OPTIONS$);" description="Expect - toHaveValues - Ensures the Locator points to multi-select/combobox (i.e. a select with the multiple attribute) and the specified values are selected." toReformat="false" toShortenFQNames="true">
+    <variable name="ELEMENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="OPTIONS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>  
+  <template name="p-neba" value="await expect($ELEMENT$).not.toBeAttached($OPTIONS$);" description="Expect - not.toBeAttached" toReformat="false" toShortenFQNames="true">
+    <variable name="ELEMENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="OPTIONS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="p-nebc" value="await expect($ELEMENT$).not.toBeChecked($OPTIONS$);" description="Expect - not.toBeChecked" toReformat="false" toShortenFQNames="true">
+    <variable name="ELEMENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="OPTIONS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="p-nebd" value="await expect($ELEMENT$).not.toBeDisabled($OPTIONS$);" description="Expect - not.toBeDisabled" toReformat="false" toShortenFQNames="true">
+    <variable name="ELEMENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="OPTIONS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="p-nebed" value="await expect($ELEMENT$).not.toBeEditable($OPTIONS$);" description="Expect - not.toBeEditable" toReformat="false" toShortenFQNames="true">
+    <variable name="ELEMENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="OPTIONS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="p-nebem" value="await expect($ELEMENT$).not.toBeEmpty($OPTIONS$);" description="Expect - not.toBeEmpty" toReformat="false" toShortenFQNames="true">
+    <variable name="ELEMENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="OPTIONS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="p-neben" value="await expect($ELEMENT$).not.toBeEnabled($OPTIONS$);" description="Expect - not.toBeEnabled" toReformat="false" toShortenFQNames="true">
+    <variable name="ELEMENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="OPTIONS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="p-nebf" value="await expect($ELEMENT$).not.toBeFocused($OPTIONS$);" description="Expect - not.toBeFocused" toReformat="false" toShortenFQNames="true">
+    <variable name="ELEMENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="OPTIONS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="p-nebh" value="await expect($ELEMENT$).not.toBeHidden($OPTIONS$);" description="Expect - not.toBeHidden" toReformat="false" toShortenFQNames="true">
+    <variable name="ELEMENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="OPTIONS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="p-nebinv" value="await expect($ELEMENT$).not.toBeInViewport($OPTIONS$);" description="Expect - not.toBeInViewport" toReformat="false" toShortenFQNames="true">
+    <variable name="ELEMENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="OPTIONS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="p-nebv" value="await expect($ELEMENT$).not.toBeVisible($OPTIONS$);" description="Expect - not.toBeVisible" toReformat="false" toShortenFQNames="true">
+    <variable name="ELEMENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="OPTIONS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="p-neha" value="await expect($ELEMENT$).not.toHaveAttribute($OPTIONS$);" description="Expect - not.toHaveAttribute" toReformat="false" toShortenFQNames="true">
+    <variable name="ELEMENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="OPTIONS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="p-nehclass" value="await expect($ELEMENT$).not.toHaveClass($OPTIONS$);" description="Expect - not.toHaveClass" toReformat="false" toShortenFQNames="true">
+    <variable name="ELEMENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="OPTIONS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="p-nehcount" value="await expect($ELEMENT$).not.toHaveCount($OPTIONS$);" description="Expect - not.toHaveCount" toReformat="false" toShortenFQNames="true">
+    <variable name="ELEMENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="OPTIONS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="p-nehcss" value="await expect($ELEMENT$).not.toHaveCSS($OPTIONS$);" description="Expect - not.toHaveCSS" toReformat="false" toShortenFQNames="true">
+    <variable name="ELEMENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="OPTIONS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="p-nehi" value="await expect($ELEMENT$).not.toHaveId($OPTIONS$);" description="Expect - not.toHaveId" toReformat="false" toShortenFQNames="true">
+    <variable name="ELEMENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="OPTIONS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="p-nehjsp" value="await expect($ELEMENT$).not.toHaveJSProperty($OPTIONS$);" description="Expect - not.toHaveJSProperty" toReformat="false" toShortenFQNames="true">
+    <variable name="ELEMENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="OPTIONS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="p-nehs" value="await expect($ELEMENT$).not.toHaveScreenshot($OPTIONS$);" description="Expect - not.toHaveScreenshot" toReformat="false" toShortenFQNames="true">
+    <variable name="ELEMENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="OPTIONS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="p-neht" value="await expect($ELEMENT$).not.toHaveText($OPTIONS$);" description="Expect - not.toHaveText" toReformat="false" toShortenFQNames="true">
+    <variable name="ELEMENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="OPTIONS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="p-nehv" value="await expect($ELEMENT$).not.toHaveValue($OPTIONS$);" description="Expect - not.toHaveValue" toReformat="false" toShortenFQNames="true">
+    <variable name="ELEMENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="OPTIONS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+    <template name="p-nehvs" value="await expect($ELEMENT$).not.toHaveValues($OPTIONS$);" description="Expect - not.toHaveValues" toReformat="false" toShortenFQNames="true">
+    <variable name="ELEMENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="OPTIONS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template> 
+</templateSet>
